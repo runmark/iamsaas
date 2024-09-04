@@ -16,7 +16,9 @@ export default defineConfig({
     strict: true,
 });
 
-export const db = drizzle(postgres(
+const pool = postgres(
     process.env.AUTH_DRIZZLE_URL as string,
     { max: 5 }
-));
+);
+
+export const db = drizzle(pool);
