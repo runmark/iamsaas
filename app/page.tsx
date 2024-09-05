@@ -1,4 +1,6 @@
-import SignIn from "@/components/sign-in";
+import SignInButton from "@/components/sign-in-button";
+import SignOutButton from "@/components/sign-out-button";
+import UserAvatar from "@/components/user-avatar";
 import Image from "next/image";
 
 export default function Home() {
@@ -40,7 +42,11 @@ export default function Home() {
         />
       </div>
       <div>
-        <SignIn />
+        <SignInButton />
+
+        <UserAvatar />
+
+        <SignOutButton />
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
